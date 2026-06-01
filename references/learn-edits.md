@@ -14,7 +14,7 @@
 ## 2. 运行 diff 分析
 
 ```bash
-python {skill_dir}/scripts/learn_edits.py --draft {draft_path} --final {final_path}
+python3 {skill_dir}/scripts/learn_edits.py --draft {draft_path} --final {final_path}
 ```
 
 ## 3. 分析并记录 pattern
