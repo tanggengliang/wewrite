@@ -418,13 +418,15 @@ python3 {skill_dir}/scripts/humanness_score.py {article_path} --json --tier3 {ag
 
 预检全部通过后才进入排版。
 
+**平台硬限**（converter 不强制，写作/发布时 agent 必须遵守）：
+- 单篇正文 ≤ 20000 字
+- 图片 ≤ 10 张（超出移除末尾多余）
+- 未认证公众号**不能用外部链接** → 转纯文本或放「阅读原文」
+- 表格 ≤ 4 列（手机端更宽会被截断）
+
 **7.2 排版 + 发布**：
 
 **如果 `skip_publish = true`** → 直接走 preview。
-
-```
-读取: {skill_dir}/references/wechat-constraints.md
-```
 
 Converter 自动处理：CJK 加空格、加粗标点外移、列表转 section、外链转脚注、暗黑模式、容器语法、AIGC 声明（impeccable 主题自动追加）、CSS 随机扰动（反低创检测指纹）。
 
